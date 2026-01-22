@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    min-height: 100vh;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    color: #ff6b6b;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 30px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+h2 {
+    color: #ffd93d;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.1em;
+}
+
+.btn-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* FORM STYLES */
+form {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 35px;
+    border-radius: 15px;
+    max-width: 450px;
+    margin: 30px auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 14px 18px;
+    margin: 15px 0;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ffd93d;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* BUTTON STYLES */
+button, .btn {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+button:hover, .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+button:active, .btn:active {
+    transform: translateY(0);
+}
+
+/* LINK STYLES */
+a {
+    color: #6bcf7f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffd93d;
+}
+
+/* TO-DO LIST CONTAINER */
+.todo-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 40px auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.todo-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* TO-DO FORM */
+.todo-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+.todo-form input {
+    flex: 1;
+    margin: 0;
+}
+
+.todo-form button {
+    margin: 0;
+    white-space: nowrap;
+    padding: 14px 24px;
+}
+
+/* TO-DO LIST */
+.todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-list li {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 18px 20px;
+    margin: 12px 0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-left: 4px solid #6bcf7f;
+}
+
+.todo-list li:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateX(5px);
+}
+
+.todo-list li.empty {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+    border-left: none;
+    justify-content: center;
+}
+
+.todo-list li span {
+    flex: 1;
+    font-size: 1.05em;
+    line-height: 1.5;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+    background: rgba(255, 107, 107, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.delete-btn:hover {
+    background: rgba(255, 107, 107, 0.4);
+    transform: scale(1.1) rotate(90deg);
+}
+
+/* WELCOME TEXT */
+strong {
+    color: #ffd93d;
+    font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    .todo-container {
+        padding: 25px;
+    }
+    
+    form {
+        padding: 25px;
+    }
+    
+    .todo-form {
+        flex-direction: column;
+    }
+    
+    .todo-form button {
+        width: 100%;
+    }
+}
